@@ -69,6 +69,9 @@ namespace AutomationFirstProject
             page.PageClick();
 
             //Assert
+            ((IJavaScriptExecutor)Driver).ExecuteScript("window.scrollTo(0, 500)");
+
+
             Assert.IsTrue(page.showNameText.Displayed);
         }
 
