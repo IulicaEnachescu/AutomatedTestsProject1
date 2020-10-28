@@ -12,12 +12,13 @@ namespace AutomationFirstProject.Tandarica
     partial class HomePage
     {
         public void PageClick()
-        {
+        {//move to element
             teamButton.Click();
-            Thread.Sleep(1000);
+            ((IJavaScriptExecutor)_driver).ExecuteScript("window.scrollTo(0, 500)");
             actorButton.Click();
-            Thread.Sleep(1000);
+            ((IJavaScriptExecutor)_driver).ExecuteScript("window.scrollTo(0, 600)");
             showButton.Click();
+
         }
     }
 }
